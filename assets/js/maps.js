@@ -22,5 +22,9 @@ function initMap() {
         });
     });
 
+    // The reason for using the %operator is so that if we have more than 26 locations, 
+    // then it will loop around to the start of our string again and go from Z back to A, 
+    // instead of throwing an error.
+
     new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
 }
